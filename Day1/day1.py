@@ -1,11 +1,17 @@
 #! /usr/bin/env python
 
 # Define the lists and var
-list1 = [7,2,8,6,1,2]
-list2 = [4,6,5,2,4,3]
+list1 = []
+list2 = []
 listOfDistances = []
 
 # Function Definitions
+def populateLists(inputFileName):
+    with open(inputFileName, "r") as file:
+        for line in file:
+            list1.append(line[0:5])
+            list2.append(line[8:13])
+
 def orderList(list):
     list.sort()
 
@@ -22,6 +28,9 @@ def displayTotalDistance(list):
     for item in list:
         totalDistance += item
     print("The total distance is: " + str(totalDistance))
+
+# Populate lists
+populateLists("inputFile.txt")
 
 # Doing the calculations 
 orderList(list1)
