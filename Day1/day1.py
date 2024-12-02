@@ -9,8 +9,8 @@ listOfDistances = []
 def populateLists(inputFileName):
     with open(inputFileName, "r") as file:
         for line in file:
-            list1.append(line[0:5])
-            list2.append(line[8:13])
+            list1.append(int(line[0:5]))
+            list2.append(int(line[8:13]))
 
 def orderList(list):
     list.sort()
