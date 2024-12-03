@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-# read file splitlines on whitespace
-# check all inc or all dec
-# check non inc or dec more than 3
-
 # Define variables
 totalSafe = 0
 inputString = ""
@@ -36,7 +32,6 @@ def reportDescending(input):
 def reportSafeLevels(input):
     asc = reportAscending(input)
     desc = reportDescending(input)
-    #input=input.split(",")
     print(str(asc) + " "+str(desc))
     if asc:
         for i in range(0,len(input)-1):
@@ -57,8 +52,6 @@ def reportSafeLevels(input):
                 print("desc list not safe")
                 break
                 
-                    
-#probably not using?
 def countSafe(input):
     global totalSafe
     for x in range(0,len(input)):
